@@ -11,5 +11,3 @@ configure_file(soma.pyx . COPYONLY)
 
 file(GLOB SOMA_HEADERS *.h)
 file(COPY ${SOMA_HEADERS} DESTINATION .)
-
-
