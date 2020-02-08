@@ -2,11 +2,16 @@ mkdir build
 
 cd build
 
-cmake ../src
-make -j4
-
-echo \n---Cythonising and running python Tests---\n
-python setup.py build_ext --inplace
-nosetests --rednose -v ../tests 
+{
+    echo '-- Compiling C++ shared library --'
+    cmake ../src
+    make -j4 
+} && {
+    echo '-- Cythonising and running python Tests --'
+    python setup.py build_ext --inplace 
+} && {
+    echo '-- Running python tests --'
+    nosetests --rednose -v ../tests  
+}
 
 cd ../
