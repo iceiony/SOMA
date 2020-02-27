@@ -12,6 +12,8 @@ def train(data, dim):
     out = (np.repeat(0, np.prod(dim))
              .reshape(dim))
 
+    net = new soma.Kohonen()
+
     return out
 
 def plot(feature_map):
