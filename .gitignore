@@ -1,3 +1,12 @@
 .DS_Store
 build/*
 __pycache__
+
+
+#Added by cargo
+#
+#already existing elements are commented out
+
+/target
+**/*.rs.bk
+Cargo.lock
