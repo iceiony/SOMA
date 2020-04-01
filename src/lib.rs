@@ -8,5 +8,6 @@ mod tests {
 
 
 #[no_mangle]
-pub extern fn process(){
+pub extern fn train(){
+    println!("library invoked!")
 }
