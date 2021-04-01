@@ -11,9 +11,8 @@ def test_trains_on_dataset():
 
     data = np.array([
     [0,0,0],
-    [1,0,1],
-    [0,1,1],
-    [1,1,0]])
+    [1,1,1],
+    ])
 
     feature_map = soma.train(data, dim = [2])
 
@@ -21,3 +20,5 @@ def test_trains_on_dataset():
     assert(type(feature_map) is np.ndarray)
 
     assert(feature_map.shape == (2, 1, 3))
+
+    assert( (feature_map == np.array([[0, 0, 0], [1, 1, 1]])).all() )
