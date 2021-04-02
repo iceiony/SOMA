@@ -4,7 +4,7 @@ from Cython.Build import cythonize
 
 ext = Extension(
     "soma",
-    ["soma.pyx"],
+    ["decl.pyx"],
     language="c++",
     libraries=['soma'],
     include_dirs=['.'],

@@ -1,9 +1,13 @@
 # distutils: language = c++
-
 import numpy as np
-cimport soma
+from decl cimport HelloWorld
 
 def train(data, dim):
+    try:
+        hello_ptr = new HelloWorld()
+    finally:
+        del hello_ptr;
+
     if len(dim) == 1:
         dim.append(1)
 
